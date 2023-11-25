@@ -1,0 +1,7 @@
+name: bloggy
+services:
+  db:
+    image: mongo:7.0.2-jammy
+    ports:
+      - "27017:27017"
+    container_name: bloggy-db
