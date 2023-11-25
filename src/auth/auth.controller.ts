@@ -6,6 +6,7 @@ import { SignupDto } from './dto/signup.dto';
 @Controller('auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
+
   @HttpCode(200)
   @Post('login')
   login(@Body() loginDto: LoginDto) {
