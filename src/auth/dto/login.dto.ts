@@ -5,7 +5,7 @@ export class LoginDto {
   @IsString()
   @MinLength(5)
   @MaxLength(64)
-  @Transform(({ value }: TransformFnParams) => value?.trim())
+  @Transform(({ value }: TransformFnParams) => value?.toLowerCase()?.trim())
   username: string;
 
   @IsString()
