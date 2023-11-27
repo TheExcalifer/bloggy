@@ -55,7 +55,6 @@ export class AuthService {
         password: hash,
       });
     } catch (error) {
-      console.error(error);
       if (error.code === 11000) throw new ConflictException('Username exist.');
     }
   }
